@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "143446297848",
+    "project_id": "uni6tarea4",
+    "storage_bucket": "uni6tarea4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143446297848:android:8cc461cfe537ea433ebf0d",
+        "android_client_info": {
+          "package_name": "com.example.uni6tarea4"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhEe6OS83_2dqUhl7IcbSyCv-5kZ6Jh0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

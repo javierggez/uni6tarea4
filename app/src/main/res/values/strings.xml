@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Gestión de Usuarios</string>
+    <string name="detail_title">Detalle de Usuario</string>
+    <string name="form_title">Contacto</string>
+    <string name="splash_welcome">Bienvenido</string>
+    <string name="splash_subtitle">Gestión de Usuarios</string>
+    <string name="loading">Cargando usuarios…</string>
+    <string name="error_loading">Error al cargar usuarios</string>
+    <string name="no_users">No hay usuarios disponibles</string>
+    <string name="retry">Reintentar</string>
+    <string name="label_name">Nombre</string>
+    <string name="label_email">Correo electrónico</string>
+    <string name="label_phone">Teléfono</string>
+    <string name="label_website">Sitio web</string>
+    <string name="label_message">Mensaje</string>
+    <string name="btn_submit">Enviar</string>
+    <string name="btn_contact">Contactar</string>
+    <string name="btn_clear">Limpiar</string>
+    <string name="form_success">Mensaje enviado correctamente</string>
+    <string name="hint_name">Tu nombre</string>
+    <string name="hint_email">Tu correo</string>
+    <string name="hint_message">Escribe tu mensaje aquí</string>
+    <string name="error_field_required">Este campo es obligatorio</string>
+    <string name="error_email_invalid">Correo electrónico no válido</string>
+    <string name="users_title">Usuarios</string>
+</resources>
