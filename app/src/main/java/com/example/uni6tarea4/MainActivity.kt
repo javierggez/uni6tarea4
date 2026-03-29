@@ -99,11 +99,15 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.isLoading.observe(this) { loading ->
             binding.progressBar.visibility = if (loading) View.VISIBLE else View.GONE
+            if (loading) binding.btnRetry.visibility = View.GONE
         }
 
         viewModel.errorMessage.observe(this) { error ->
-            error?.let {
-                Toast.makeText(this, it, Toast.LENGTH_LONG).show()
+            if (error != null) {
+                Toast.makeText(this, error, Toast.LENGTH_LONG).show()
+                binding.btnRetry.visibility = View.VISIBLE
+            } else {
+                binding.btnRetry.visibility = View.GONE
             }
         }
     }
