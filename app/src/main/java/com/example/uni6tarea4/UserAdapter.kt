@@ -2,6 +2,7 @@ package com.example.uni6tarea4
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uni6tarea4.databinding.ItemUserBinding
 
@@ -38,7 +39,25 @@ class UserAdapter(
 
     fun updateUsers(newUsers: List<User>) {
         // filter: mostrar solo usuarios válidos en la UI
-        users = newUsers.filter { it.isValid() }
-        notifyDataSetChanged()
+        val filtered = newUsers.filter { it.isValid() }
+        val diffResult = DiffUtil.calculateDiff(UserDiffCallback(users, filtered))
+        users = filtered
+        diffResult.dispatchUpdatesTo(this)
+    }
+
+    private class UserDiffCallback(
+        private val oldList: List<User>,
+        private val newList: List<User>
+    ) : DiffUtil.Callback() {
+
+        override fun getOldListSize() = oldList.size
+
+        override fun getNewListSize() = newList.size
+
+        override fun areItemsTheSame(oldPos: Int, newPos: Int) =
+            oldList[oldPos].id == newList[newPos].id
+
+        override fun areContentsTheSame(oldPos: Int, newPos: Int) =
+            oldList[oldPos] == newList[newPos]
     }
 }
