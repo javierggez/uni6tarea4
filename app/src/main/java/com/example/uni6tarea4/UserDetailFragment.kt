@@ -39,11 +39,11 @@ class UserDetailFragment : Fragment() {
         val website = arguments?.getString(ARG_USER_WEBSITE) ?: ""
 
         binding.apply {
-            tvDetailId.text = "ID: $userId"
-            tvDetailName.text = name
-            tvDetailEmail.text = email
-            tvDetailPhone.text = phone.let { if (it.isBlank()) "No disponible" else it }
-            tvDetailWebsite.text = website.let { if (it.isBlank()) "No disponible" else it }
+            tvDetailId.text = if (userId != -1) "ID: $userId" else "ID: desconocido"
+            tvDetailName.text = name.ifBlank { "Sin nombre" }
+            tvDetailEmail.text = email.ifBlank { "Sin correo" }
+            tvDetailPhone.text = phone.ifBlank { "No disponible" }
+            tvDetailWebsite.text = website.ifBlank { "No disponible" }
         }
     }
 
